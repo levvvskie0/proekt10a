@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>I love you Agata ❤️</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body {
+      background: #000;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      font-family: 'Consolas', monospace;
+    }
+
+    .laptop {
+      width: 940px;
+      height: 630px;
+      background: #111;
+      border: 22px solid #222;
+      border-radius: 30px 30px 65px 65px;
+      position: relative;
+      box-shadow: 0 30px 70px rgba(0,0,0,0.95);
+    }
+
+    .screen {
+      width: 100%;
+      height: 100%;
+      background: #000;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .code-panel {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 38%;
+      height: 100%;
+      background: #0a0a0a;
+      color: #00ff9d;
+      font-size: 13.5px;
+      padding: 18px;
+      overflow: hidden;
+      border-right: 2px solid #222;
+      line-height: 1.4;
+    }
+
+    .heart-container {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 62%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #000;
+    }
+
+    .heart {
+      position: relative;
+      width: 400px;
+      height: 400px;
+    }
+
+    .text {
+      position: absolute;
+      color: #ff0033;
+      font-size: 16px;
+      font-weight: bold;
+      text-shadow: 0 0 12px #ff0033;
+      white-space: nowrap;
+      pointer-events: none;
+      animation: spiral 45s linear infinite;   /* ← Увеличил интервал */
+    }
+
+    @keyframes spiral {
+      from {
+        transform: rotate(0deg) translateX(165px) rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg) translateX(165px) rotate(-360deg);
+      }
+    }
+
+    .tiktok {
+      position: absolute;
+      bottom: 60px;
+      right: 35px;
+      color: white;
+      font-size: 19px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      z-index: 10;
+    }
+
+    .taskbar {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 48px;
+      background: #111;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      border-top: 1px solid #333;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="laptop">
+    <div class="screen">
+
+      <!-- Код слева -->
+      <div class="code-panel">
+        &lt;!DOCTYPE html&gt;<
+        &lt;html&gt;<
+        &nbsp;&nbsp;&lt;head&gt;...&lt;/head&gt;<
+
+        &nbsp;&nbsp;&lt;body&gt;<
+        &nbsp;&nbsp;&nbsp;&nbsp;I love you Agata ❤️<b
+
+       &nbsp;&nbsp;&lt;style&gt;<b
+       &nbsp;&nbsp;&nbsp;&nbsp;heart { animation: love 45s linear infinite; }<b
+       &nbsp;&nbsp;&lt;/style&gt;
+      </div>
+
+      <!-- Сердце -->
+      <div class="heart-container">
+        <div class="heart" id="heart"></div>
+      </div>
+
+      <!-- TikTok -->
+      <div class="tiktok">
+        <span style="color:#ff0050;">♬</span>
+        TikTok @ii1_83
+      </div>
+
+      <!-- Таскбар -->
+      <div class="taskbar">
+        <span style="color:#00ff00;">●</span>
+        <span style="color:white;">I love you Agata — Love Forever</span>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    const heart = document.getElementById('heart');
+    const phrases = [
+      "I love you Agata",
+      "❤️ I love you Agata ❤️",
+      "Agata",
+      "I love you Agata",
+      "My Agata ❤️"
+    ];
+
+    for (let i = 0; i < 95; i++) {
+      const span = document.createElement('span');
+      span.className = 'text';
+      span.textContent = phrases[Math.floor(Math.random() * phrases.length)];
+      
+      span.style.fontSize = (14 + Math.random() * 8) + 'px';
+      span.style.opacity = 0.7 + Math.random() * 0.4;
+      span.style.color = Math.random() > 0.6 ? '#ff3366' : '#ff0033';
+      
+      // Большая задержка — увеличивает интервал между текстами
+      span.style.animationDelay = '-' + (i * 0.45) + 's';
+      
+      heart.appendChildpan);
+    }
+  </script>
+
+</body>
+</html>(s
